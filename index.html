@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive calculator by musakalam</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initila-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    body {
+        height: 100vh;
+        background-color: #333;
+        display: grid;
+        place-items: center;
+        color: white;
+        margin: 0px;
+        padding: 0;
+
+    }
+
+    input {
+    
+        font-size: 25px;
+        margin: 5px;
+        background-color: #333;
+        outline: none;
+        border: none;
+        color: white;
+        text-align: end;
+        
+    }
+
+    input::placeholder {
+        color: white;
+        text-align: end;
+        font-size: 30px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+
+    }
+
+    button {
+        width: 70px;
+        padding: 20px 10px 20px 10px;
+        border-radius: 50%;
+        height: 70px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        font-size: 25px;
+        text-transform: capitalize;
+        outline: none;
+        border: none;
+        box-shadow: -5px -5px 10px black;
+        cursor: pointer;
+
+    }
+
+    .equal {
+        background-color: rgb(60, 192, 192);
+    
+        
+        box-shadow: -5px -5px 10px black;
+    }
+.to{
+    width: 160px;
+    border-radius: 20px;
+}
+    button:hover {
+        opacity: 0.5;
+    }
+
+    p{
+        font-size: 10x;
+        font-family: agency fb;
+        text-align: center;
+        text-transform: capitalize;
+
+    }
+</style>
+
+
+<body>
+
+    <p id="date"></p>
+    <form name="elements">
+
+        <div class="container">
+
+            <input type="textfield" name="calculate" value="" placeholder="0" id="calculate"><br />
+
+
+
+            <button type="button" onclick="document.elements.calculate.value +='('">(</button>
+            <button type="button" onclick="document.elements.calculate.value +=')'">)</button>
+            <button type="button" onclick="document.elements.calculate.value **=2">x<sup>2</sup></button>
+            <button type="button"
+                onclick="document.elements.calculate.value= document.elements.calculate.value.slice(0,-1)" class="equal"> del</button>
+            <br>
+            <button type="button" onclick="document.elements.calculate.value +='9'">9</button>
+            <button type="button" onclick="document.elements.calculate.value +='8'">8</button>
+            <button type="button" onclick="document.elements.calculate.value +='7'">7</button>
+            <button type="button" onclick="document.elements.calculate.value +='+'" class="equal">+</button>
+            <br>
+
+            <button type="button" onclick="document.elements.calculate.value +='6'">6</button>
+            <button type="button" onclick="document.elements.calculate.value +='5'">5</button>
+            <button type="button" onclick="document.elements.calculate.value +='4'" >4</button>
+            <button type="button" onclick="document.elements.calculate.value +='*'" class="equal">&times;</button>
+            <br>
+            <button type="button" onclick="document.elements.calculate.value +='3'">3</button>
+            <button type="button" onclick="document.elements.calculate.value +='2'">2</button>
+            <button type="button" onclick="document.elements.calculate.value +='1'">1</button>
+            <button type="button" onclick="document.elements.calculate.value +='-'" class="equal">-</button>
+            <br>
+           
+            <button type="button" onclick="document.elements.calculate.value +='.'">.</button> 
+            <button type="button" onclick="document.elements.calculate.value +='0'">0</button>
+           
+<button type="format" class="ce">a/c</button>
+            <button type="button" onclick="document.elements.calculate.value +='/'" class="equal">/</button>
+            <br>
+            <button type="button"
+                onclick="document.elements.calculate.value= Math.sqrt(document.elements.calculate.value)">
+                &Sqrt;</button>
+             <button type="button" onclick="document.elements.calculate.value=document.elements.calculate.value/100 ">
+                %</button>
+            <button type="button" onclick="document.elements.calculate.value=eval(document.elements.calculate.value)"
+                class="equal to" >=</button><br>
+
+
+        </div>
+<p> developed by musakalam contact: 09034182767</p>
+    </form>
+
+
+
+
+</body>
+<script>
+    let date = document.getElementById("date");
+    var dates = new Date();
+    date.innerHTML = dates
+
+</script>
+
+</html>
